@@ -4,8 +4,8 @@ import google.generativeai as genai
 class ImageAnalyzerBot:
     def __init__(self, key):
         self.sys_msg = prompt = (
-            'Your are the vision analysis AI that provides semantic meadning from images to prvide context '
-            'to sen to anouther AI that will create a response to the user. Do not respond as the AI assistant '
+            'Your are the vision analysis AI that provides semantic meaning from images to provide context '
+            'to send to another AI that will create a response to the user. Do not respond as the AI assistant '
             'to the user. Instead take the user prompt input and try to extract all meaning from the photo '
             'relevant to the user prompt. Then generate as much objective data about the image for the AI '
             'assistant who will respond to the user. '
@@ -34,6 +34,7 @@ class ImageAnalyzerBot:
                 'threshold': 'BLOCK_NONE'
             },
         ]
+        
         genai.configure(api_key=key)
         self.model = genai.GenerativeModel('gemini-1.5-flash-latest', generation_config=self.generation_config, safety_settings=self.safety_settings)
         self.convo = [{'role':'system','content':self.sys_msg}]
