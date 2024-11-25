@@ -1,6 +1,10 @@
 from groq import Groq
 
-## This is 2 or thre different bots ....
+## Trying to determin if the user intend to use:
+# * extract content from the clipboard, 
+# * whants to take a snapchot of the screen or 
+# * take a picture with the web camera
+# Returns a short message what is intended, non if it is unable to determin the intension.
 
 class DispatcherBot:
     def __init__(self, key):
@@ -17,7 +21,6 @@ class DispatcherBot:
         
     
     def ask(self, prompt):
-        
         self.convo.append({'role':'user','content':prompt})
         chat_completion=self.groq_client.chat.completions.create(messages=self.convo, model='llama3-70b-8192')
         response = chat_completion.choices[0].message

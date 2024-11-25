@@ -1,6 +1,8 @@
 from PIL import Image
 import google.generativeai as genai
 
+# Analyzes an image and returns a description
+
 class ImageAnalyzerBot:
     def __init__(self, key):
         self.sys_msg = prompt = (

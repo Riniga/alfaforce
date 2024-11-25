@@ -1,5 +1,7 @@
 from groq import Groq
-# create parent  of type GroqBot
+# En bot som analyzerar text och bild och försöker returnera en response.
+#TODO: create parent  of type GroqBot
+
 class ChatBot:
     def __init__(self, key):
         self.groq_client = Groq(api_key=key )

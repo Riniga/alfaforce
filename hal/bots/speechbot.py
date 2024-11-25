@@ -2,7 +2,6 @@ from openai import OpenAI
 from enum import Enum
 import pyaudio
 
-
 class SpeechBot:
     def __init__(self, key, voice):
         self.openai_client = OpenAI(api_key=key)
