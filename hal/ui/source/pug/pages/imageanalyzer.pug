@@ -1,0 +1,13 @@
+﻿extends ../templates/startpage.pug
+block content
+    .chat-box.border.rounded.p-3#chatBox(style='height: 400px; overflow-y: auto;')
+    form#chatForm
+        .form-group
+            h2.cover-heading Ladda upp en fil för analys
+        .form-group
+            label(for='fileUpload') Ladda upp en fil
+            input#fileUpload.form-control-file(type='file')
+        button.btn.btn-primary(type='submit') Skicka
+
+block scripts
+    script(src="/scripts/imageanalyzer.js")

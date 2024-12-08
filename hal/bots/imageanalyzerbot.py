@@ -43,6 +43,7 @@ class ImageAnalyzerBot:
 
     def ask(self, prompt, photo_path):
         img=Image.open(photo_path)
+      
         prompt = (
             self.sys_msg + f'\n USER PROMPT: {prompt}'
         )

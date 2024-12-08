@@ -1,0 +1,35 @@
+﻿extends ../templates/startpage.pug
+block content
+
+
+    .chat-box.border.rounded.p-3#chatBox(style='height: 400px; overflow-y: auto;')
+        .d-flex.justify-content-start.mb-3
+            .p-2.bg-primary.text-white.rounded
+                small Person A:
+                p.mb-0 Hello! How are you?
+        .d-flex.justify-content-end.mb-3
+            .p-2.bg-secondary.text-white.rounded
+                small Person B:
+                p.mb-0 Hi! I&rsquo;m good, thanks. How about you?
+        .d-flex.justify-content-start.mb-3
+            .p-2.bg-primary.text-white.rounded
+                small Person A:
+                p.mb-0 I&rsquo;m doing well too. What are you up to?
+        .d-flex.justify-content-end.mb-3
+            .p-2.bg-secondary.text-white.rounded
+                small Person B:
+                p.mb-0 Just working on a project. What about you?
+
+
+
+    form#chatForm
+        .form-group
+            h2.cover-heading Vad kan jag hjälpa till med?
+            input#messageInput.form-control(type="text" placeholder='Skriv här...')
+        .form-group
+            label(for='fileUpload') Ladda upp en fil
+            input#fileUpload.form-control-file(type='file')
+        button.btn.btn-primary(type='submit') Skicka
+
+block scripts
+    script(src="/scripts/chatbot.js")

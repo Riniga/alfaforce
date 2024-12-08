@@ -1,0 +1,10 @@
+﻿extends ../templates/startpage.pug
+block content
+    .chat-box.border.rounded.p-3#chatBox(style='height: 400px; overflow-y: auto;')
+    form#chatForm
+        .form-group
+            h2.cover-heading Type a text, and I will read it out loud!
+            input#messageInput.form-control(type="text" placeholder='Skriv här...')
+        button.btn.btn-primary(type='submit') Skicka
+block scripts
+    script(src="/scripts/speechbot.js")
