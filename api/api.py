@@ -1,7 +1,7 @@
 import sys
 import os
 parent_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.join(parent_dir, '..'))
+sys.path.append(os.path.join(parent_dir, '../hal'))
 import bots as bot
 
 from fastapi import FastAPI, File, UploadFile
@@ -15,7 +15,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:9000"],
+    allow_origins=["http://127.0.0.1:9000", "https://hal.mjukvaror.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -41,8 +41,7 @@ async def upload_file(file: UploadFile = File(...)):
     response = imageAnalyzer.ask("Describe the content", file_path)
     return {"message": response}
 
-
-# uvicorn chatbot:app --reload --host 0.0.0.0 --port 5000
+# uvicorn api:app --reload --host 0.0.0.0 --port 5000
 # curl http://localhost:5000/api?query=vad%20heter%20jag
 
 

@@ -1,1 +1,0 @@
-var MainMenuApiUrl = "https://azurewebappfunctiontest.azurewebsites.net/api/MainMenu?code=[key]";

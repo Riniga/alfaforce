@@ -10,7 +10,6 @@ Ollama
 * pip install -r requirements.txt
 * create a .env file with: LLAMA_CLOUD_API_KEY="..."
 
-
 ### Not working
 * conda install ollama 
 ### Do instead until fixed

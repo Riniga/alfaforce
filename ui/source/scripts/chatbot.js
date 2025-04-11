@@ -19,7 +19,7 @@ document.getElementById('chatForm').addEventListener('submit', function (event) 
         const chatBox = document.getElementById('chatBox');
         chatBox.appendChild(sentMessageBubble);
         
-        fetch("http://localhost:5000/chatbot?query="+message)
+        fetch(api_url +"/chatbot?query="+message)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
