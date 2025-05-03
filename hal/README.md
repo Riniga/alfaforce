@@ -1,16 +1,25 @@
-# The Coder
-A bot to support us with code
+# Heuristic AI Library (HAL)
+This is the core library, with bots and intelligens at your service.
+
+## Prerequisites
+Conda environmentt with python 3.13.1
+
+### Packages
+* conda install groq
+* pip install faster-whisper
+* pip install SpeechRecognition
+* conda install pillow
+* conda install google-generativeai
+* conda install openai
+* pip install pyaudio
+* pip install dotenv
 
 ## Tools
 Llama Index - [LLM](https://www.llamaindex.ai/) 
 Ollama 
 
-## Environment
-* Create  a new conda environment for this project
-* conda create -n hal python=3.11.6 
-* Use conda environment "hal": conda activate hal
-* python -m pip install -r requirements.txt
 
+## Test
 
 
 ### Errors

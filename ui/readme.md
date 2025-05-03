@@ -1,13 +1,17 @@
-conda install nodejs
-npm install npm@latest -g
-npm install -g gulp
-npm install -g live-server
-npm init
-npm install
 
-gulp
-gulp watch
+## Prerequisites
+Conda environmentt with python 3.13.1
+* packages: 
+  * conda install nodejs
+  * npm install -g gulp
+  * npm install -g live-server
+* Initalize
+  * npm install
+* Build environemnt
+  * gulp
+  * gulp watch
+* Start API
 
-# Requires that api is started
+## Start the web-server
 start live-server --port=9000 public
 

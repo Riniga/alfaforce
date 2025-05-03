@@ -41,8 +41,7 @@ async def upload_file(file: UploadFile = File(...)):
     response = imageAnalyzer.ask("Describe the content", file_path)
     return {"message": response}
 
-# uvicorn api:app --reload --host 0.0.0.0 --port 5000
-# curl http://localhost:5000/api?query=vad%20heter%20jag
+
 
 
 

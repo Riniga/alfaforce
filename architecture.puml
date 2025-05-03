@@ -1,0 +1,21 @@
+@startuml
+skinparam componentStyle rectangle
+
+package "AI Ekosystem" {
+    [HAL] <<Library>>
+}
+
+package "User Interfaces" {
+    [BotFramework] <<Application>>
+    [UI] <<Web UI>>
+}
+
+package "Integration" {
+    [API] <<REST API>>
+}
+
+[BotFramework] --> [HAL] : Uses
+[API] --> [HAL] : Calls
+[UI] --> [API] : Requests
+
+@enduml

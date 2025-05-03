@@ -4,14 +4,10 @@ A Microsoft [Bot Framework](https://dev.botframework.com) bot that later should 
 This bot is the interface to command other bots to do their best
 
 ## Prerequisites
-Conda environmentt called bot with 
-python 3.13.1
+Conda environmentt with python 3.13.3
 packages: 
-- botbuilder-core
-- asyncio
-- aiohttp
-- cookiecutter==1.7.0
-- bot conda environment
+- pip install botbuilder
+- pip install botbuilder-core
 
 ### Testing the bot using Bot Framework Emulator
 [Bot Framework Emulator](https://github.com/microsoft/botframework-emulator) is a desktop application that allows bot developers to test and debug their bots on localhost or running remotely through a tunnel.
@@ -21,7 +17,6 @@ packages:
 - cookiecutter https://github.com/microsoft/BotBuilder-Samples/releases/download/Templates/echo.zip
 
 ## Running the sample
-- Run `pip install -r requirements.txt` to install all dependencies
 - Run `python app.py`
 
 ### Connect to the bot using Bot Framework Emulator
